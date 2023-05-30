@@ -16,14 +16,5 @@ class Node:
         return tail
 
 
-ll = Node(1)
-ll.append_(2)
-ll.append_(3)
-
-node = ll
-print(node.data)
-while node.next:
-    node = node.next
-    print(node.data)
 
 

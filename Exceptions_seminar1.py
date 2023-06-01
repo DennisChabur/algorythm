@@ -30,8 +30,20 @@ def array_members_sum(list1, list2):
         list3.append(list1[i] - list2[i])
     return list3
 
+
+def array_members_sum_TRY_EXCEPT(list1, list2):
+    list3 = []
+    if len(list1) != len(list2):
+        raise Exception('LengthListEqualsError')
+    for i in range(len(list1)):
+        list3.append(list1[i] - list2[i])
+    return list3
+
 print(array_members_sum([5,4,3,2,1], [1,2,3,4,5]))
 print(array_members_sum([1], [1,2]))
+
+print(array_members_sum_TRY_EXCEPT([5,4,3,2,1], [1,2,3,4,5]))
+print(array_members_sum_TRY_EXCEPT([1], [1,2]))
 
 '''3) * Дополнительно * Реализуйте метод, принимающий в качестве аргументов два целочисленных массива, 
 и возвращающий новый массив, каждый элемент которого равен частному элементов двух входящих массивов в 
